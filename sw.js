@@ -1,5 +1,5 @@
-const CACHE = 'gym-v3';
-const ASSETS = ['/', '/index.html', '/icon.png', '/pelota.png'];
+const CACHE = 'gym-v5';
+const ASSETS = ['/', '/index.html', '/icon.png', '/muri.jpeg', '/manifest.json'];
 
 self.addEventListener('install', e => {
     e.waitUntil(
