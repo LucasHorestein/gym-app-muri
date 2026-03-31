@@ -1,7 +1,8 @@
 {
   "name": "Muri Gym",
   "short_name": "Muri",
-  "start_url": ".",
+  "start_url": "/gym-app-muri/",
+  "scope": "/gym-app-muri/",
   "display": "standalone",
   "background_color": "#08050f",
   "theme_color": "#08050f",
