@@ -10,22 +10,22 @@
     <link rel="icon" type="image/png" sizes="512x512" href="icon.png">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <meta name="theme-color" content="#0d0a07">
+    <meta name="theme-color" content="#08050f">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
 
     <style>
         :root {
-            --bg:        #0d0a07;
-            --surface:   rgba(22,15,9,0.72);
-            --surface-h: rgba(32,22,12,0.82);
-            --border:    rgba(210,100,20,0.22);
-            --accent:    #e8722a;
-            --accent2:   #c45a10;
+            --bg:        #08050f;
+            --surface:   rgba(15,8,28,0.72);
+            --surface-h: rgba(25,12,45,0.82);
+            --border:    rgba(155,92,246,0.22);
+            --accent:    #9b5cf6;
+            --accent2:   #7c3aed;
             --danger:    #cf6679;
-            --text:      #f5ede4;
-            --muted:     rgba(245,237,228,0.45);
+            --text:      #f0eaf8;
+            --muted:     rgba(220,210,240,0.5);
             --radius:    18px;
             --font:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             --bg-image:  none;
@@ -60,21 +60,21 @@
         #bg-gradient {
             position: fixed; inset: 0; z-index: -2;
             background-image:
-                radial-gradient(ellipse 90% 45% at 50% -5%, rgba(232,114,42,0.20) 0%, transparent 65%),
-                radial-gradient(ellipse 55% 35% at 95% 85%, rgba(196,90,16,0.12) 0%, transparent 60%);
+                radial-gradient(ellipse 90% 45% at 50% -5%, rgba(155,92,246,0.22) 0%, transparent 65%),
+                radial-gradient(ellipse 55% 35% at 95% 85%, rgba(124,58,237,0.14) 0%, transparent 60%);
             pointer-events: none;
         }
 
         body::before {
             content: '';
             position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(13,10,7,0.88);
+            background: rgba(8,5,15,0.88);
             z-index: -1;
         }
 
         /* ── HEADER ── */
         header {
-            background: rgba(13,10,7,0.85);
+            background: rgba(8,5,15,0.85);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             position: sticky; top: 0; z-index: 100;
@@ -134,11 +134,11 @@
             transition: background 0.2s, transform 0.15s;
             position: relative; overflow: hidden;
         }
-        .card:active { background: var(--surface-h); transform: scale(0.99); border-color: rgba(232,114,42,0.3); }
+        .card:active { background: var(--surface-h); transform: scale(0.99); border-color: rgba(155,92,246,0.3); }
         .card.today {
-            border-color: rgba(232,114,42,0.45);
-            background: rgba(232,114,42,0.08);
-            box-shadow: 0 0 0 1px rgba(232,114,42,0.18), 0 6px 28px rgba(196,90,16,0.18);
+            border-color: rgba(155,92,246,0.45);
+            background: rgba(155,92,246,0.08);
+            box-shadow: 0 0 0 1px rgba(155,92,246,0.18), 0 6px 28px rgba(124,58,237,0.18);
         }
         .card.today .arrow { border-color: var(--accent); color: var(--accent); }
 
@@ -146,7 +146,7 @@
             min-width: 50px; height: 50px; border-radius: 14px;
             background: linear-gradient(145deg, #f09040, #c45a10);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            flex-shrink: 0; box-shadow: 0 4px 14px rgba(196,90,16,0.4);
+            flex-shrink: 0; box-shadow: 0 4px 14px rgba(124,58,237,0.4);
             position: relative; overflow: hidden;
         }
         .day-badge::before {
@@ -163,32 +163,32 @@
             display: inline-block; margin-top: 5px;
             font-size: 0.62rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
             padding: 2px 9px; border-radius: 99px;
-            background: rgba(232,114,42,0.15); color: var(--accent);
-            border: 1px solid rgba(232,114,42,0.25);
+            background: rgba(155,92,246,0.15); color: var(--accent);
+            border: 1px solid rgba(155,92,246,0.25);
         }
         .last-log.pending { background: rgba(255,255,255,0.05); color: var(--muted); border-color: rgba(255,255,255,0.08); }
 
         .arrow {
             width: 28px; height: 28px; border-radius: 50%;
-            border: 1px solid rgba(232,114,42,0.2);
+            border: 1px solid rgba(155,92,246,0.2);
             display: flex; align-items: center; justify-content: center;
             color: var(--muted); flex-shrink: 0; font-size: 0.75rem;
         }
 
         /* ── WORKOUT HEADER CARD ── */
         .workout-day-header {
-            background: rgba(232,114,42,0.08);
-            border: 1px solid rgba(232,114,42,0.35);
+            background: rgba(155,92,246,0.08);
+            border: 1px solid rgba(155,92,246,0.35);
             border-radius: var(--radius);
             padding: 18px 20px;
             display: flex; align-items: center; gap: 16px;
-            box-shadow: 0 4px 24px rgba(196,90,16,0.15);
+            box-shadow: 0 4px 24px rgba(124,58,237,0.15);
         }
         .workout-day-badge {
             min-width: 54px; height: 54px; border-radius: 15px;
             background: linear-gradient(145deg, #f09040, #c45a10);
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            flex-shrink: 0; box-shadow: 0 4px 16px rgba(196,90,16,0.5);
+            flex-shrink: 0; box-shadow: 0 4px 16px rgba(124,58,237,0.5);
         }
         .workout-day-badge .num { font-size: 1.5rem; font-weight: 900; color: #fff; line-height: 1; }
         .workout-day-badge .lbl { font-size: 0.55rem; font-weight: 700; color: rgba(255,255,255,0.8); letter-spacing: 1.5px; text-transform: uppercase; }
@@ -199,8 +199,8 @@
             display: inline-block; margin-top: 6px;
             font-size: 0.62rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase;
             padding: 3px 10px; border-radius: 99px;
-            background: rgba(232,114,42,0.15); color: var(--accent);
-            border: 1px solid rgba(232,114,42,0.3);
+            background: rgba(155,92,246,0.15); color: var(--accent);
+            border: 1px solid rgba(155,92,246,0.3);
         }
 
         /* ── MUSCLE GROUP ── */
@@ -271,7 +271,7 @@
             transition: border-color 0.2s;
         }
         select.reps-select:focus { border-color: var(--accent); background: rgba(255,255,255,0.1); }
-        select.reps-select option { background: #1a1208; color: var(--text); }
+        select.reps-select option { background: #0d0820; color: var(--text); }
 
         /* Modo Fallo — tabla de series */
         .fallo-grid {
@@ -288,14 +288,14 @@
             white-space: nowrap; width: 56px;
         }
         .fallo-input {
-            flex: 1; background: rgba(232,114,42,0.06);
-            border: 1px solid rgba(232,114,42,0.3);
+            flex: 1; background: rgba(155,92,246,0.06);
+            border: 1px solid rgba(155,92,246,0.3);
             border-radius: 10px; color: var(--accent);
             padding: 8px 6px; font-size: 1.2rem; font-weight: 800;
             text-align: center; outline: none;
             transition: border-color 0.2s;
         }
-        .fallo-input:focus { border-color: var(--accent); background: rgba(232,114,42,0.12); }
+        .fallo-input:focus { border-color: var(--accent); background: rgba(155,92,246,0.12); }
 
         input {
             background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
@@ -305,7 +305,7 @@
             transition: border-color 0.2s;
         }
         input:focus { border-color: var(--accent); background: rgba(255,255,255,0.1); }
-        input.weight-input { color: var(--accent); border-color: rgba(232,114,42,0.3); background: rgba(232,114,42,0.06); }
+        input.weight-input { color: var(--accent); border-color: rgba(155,92,246,0.3); background: rgba(155,92,246,0.06); }
 
         .mini-history {
             padding: 8px 16px 12px;
@@ -326,7 +326,7 @@
             resize: none; font-family: var(--font); outline: none; line-height: 1.5;
             transition: border-color 0.2s, color 0.2s;
         }
-        .in-notes:focus { border-color: rgba(232,114,42,0.4); color: var(--text); background: rgba(255,255,255,0.06); }
+        .in-notes:focus { border-color: rgba(155,92,246,0.4); color: var(--text); background: rgba(255,255,255,0.06); }
         .in-notes::placeholder { color: rgba(245,237,228,0.2); }
 
         /* Extras (URL / imagen) */
@@ -341,9 +341,9 @@
             border-color: rgba(255,255,255,0.08);
         }
         .link-btn {
-            background: rgba(232,114,42,0.15); color: var(--accent); text-decoration: none;
+            background: rgba(155,92,246,0.15); color: var(--accent); text-decoration: none;
             padding: 8px 12px; border-radius: 8px; font-size: 0.82rem; font-weight: 700;
-            white-space: nowrap; border: 1px solid rgba(232,114,42,0.3);
+            white-space: nowrap; border: 1px solid rgba(155,92,246,0.3);
         }
         .img-row { display: flex; align-items: center; gap: 10px; }
         .file-input { display: none; }
@@ -386,7 +386,7 @@
 
         /* Add exercise button */
         .add-ex-btn {
-            width: 100%; background: transparent; border: 1.5px dashed rgba(232,114,42,0.22);
+            width: 100%; background: transparent; border: 1.5px dashed rgba(155,92,246,0.22);
             color: var(--muted); padding: 15px; border-radius: var(--radius);
             font-weight: 600; font-size: 0.9rem; cursor: pointer;
             margin-top: 4px; transition: border-color 0.2s, color 0.2s;
@@ -411,11 +411,11 @@
         .timer-display:active { background: rgba(255,255,255,0.08); }
         .timer-display.timer-urgent { color: #ff4f4f; border-color: rgba(255,79,79,0.35); }
         .timer-display.timer-done   { color: rgba(255,255,255,0.25); }
-        .timer-display.timer-editing { border-color: var(--accent); background: rgba(232,114,42,0.08); }
+        .timer-display.timer-editing { border-color: var(--accent); background: rgba(155,92,246,0.08); }
         .timer-editor {
             display: none; align-items: center; gap: 4px;
-            background: rgba(232,114,42,0.08); border-radius: 10px;
-            border: 1px solid rgba(232,114,42,0.3); padding: 5px 10px;
+            background: rgba(155,92,246,0.08); border-radius: 10px;
+            border: 1px solid rgba(155,92,246,0.3); padding: 5px 10px;
         }
         .timer-unit-input {
             width: 46px !important; padding: 4px 2px !important;
@@ -424,7 +424,7 @@
             border: none !important; color: var(--accent) !important;
             border-radius: 6px !important; outline: none !important;
         }
-        .timer-unit-input:focus { background: rgba(232,114,42,0.12) !important; }
+        .timer-unit-input:focus { background: rgba(155,92,246,0.12) !important; }
         .timer-colon-sep { font-size: 1.5rem; font-weight: 800; color: var(--accent); margin: 0 1px; }
         .timer-apply-btn {
             background: var(--accent); color: #fff; border: none;
@@ -441,8 +441,8 @@
         }
         .timer-btn:active { background: rgba(255,255,255,0.12); color: var(--text); }
         .timer-btn.timer-running {
-            background: rgba(232,114,42,0.25); color: var(--accent);
-            border-color: rgba(232,114,42,0.5);
+            background: rgba(155,92,246,0.25); color: var(--accent);
+            border-color: rgba(155,92,246,0.5);
         }
         .timer-presets { display: flex; gap: 6px; flex-wrap: wrap; }
         .timer-preset {
@@ -452,7 +452,7 @@
             cursor: pointer; transition: all 0.15s; letter-spacing: 0.5px;
         }
         .timer-preset:active,
-        .timer-preset.tp-active { background: rgba(232,114,42,0.18); color: var(--accent); border-color: rgba(232,114,42,0.4); }
+        .timer-preset.tp-active { background: rgba(155,92,246,0.18); color: var(--accent); border-color: rgba(155,92,246,0.4); }
 
         /* ── FAB ── */
         .fab {
@@ -461,7 +461,7 @@
             color: #fff; border: none; border-radius: 99px;
             padding: 16px 0; width: calc(100% - 28px); max-width: 612px;
             font-weight: 800; font-size: 1rem; letter-spacing: 1.5px; text-transform: uppercase;
-            box-shadow: 0 4px 28px rgba(196,90,16,0.55); cursor: pointer;
+            box-shadow: 0 4px 28px rgba(124,58,237,0.55); cursor: pointer;
             z-index: 200; display: none;
         }
         .fab:active { transform: translateX(-50%) scale(0.98); }
@@ -469,7 +469,7 @@
         /* ── SETTINGS ── */
         .settings-container { text-align: center; padding: 20px; }
         .logo-upload-area {
-            border: 2px dashed rgba(232,114,42,0.3); padding: 30px; border-radius: var(--radius);
+            border: 2px dashed rgba(155,92,246,0.3); padding: 30px; border-radius: var(--radius);
             margin-bottom: 20px; cursor: pointer;
             background: var(--surface);
         }
@@ -528,7 +528,7 @@
         /* ── TOAST ── */
         #autosave-toast {
             position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%) translateY(12px);
-            background: rgba(232,114,42,0.95); color: #fff; padding: 7px 18px;
+            background: rgba(155,92,246,0.95); color: #fff; padding: 7px 18px;
             border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px;
             opacity: 0; transition: opacity 0.25s ease, transform 0.25s ease;
             z-index: 300; pointer-events: none; white-space: nowrap;
@@ -546,7 +546,7 @@
         }
         #splash {
             position: fixed; inset: 0; z-index: 999;
-            background: #0d0a07;
+            background: #08050f;
             overflow: hidden;
             display: flex; align-items: center; justify-content: center;
             transition: opacity 0.65s ease;
@@ -556,11 +556,24 @@
             position: absolute; inset: 0;
             width: 100%; height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: center top;
             display: block;
             image-rendering: high-quality;
             transform-origin: center center;
             animation: splashZoomIn 3.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        #splash .splash-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(8,5,15,0.85) 0%, rgba(8,5,15,0.1) 60%, transparent 100%);
+        }
+        #splash .splash-msg {
+            position: absolute; bottom: 12%; left: 0; right: 0;
+            text-align: center;
+            font-size: 2.4rem; font-weight: 900; letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #fff;
+            text-shadow: 0 0 30px rgba(155,92,246,0.9), 0 2px 8px rgba(0,0,0,0.6);
+            animation: fadeIn 0.8s ease 1.8s both;
         }
     </style>
 </head>
@@ -572,7 +585,9 @@
 
     <!-- Splash Screen -->
     <div id="splash">
-        <img class="splash-logo" src="icon.png" alt="Gym">
+        <img class="splash-logo" src="muri.jpeg" alt="Muri">
+        <div class="splash-overlay"></div>
+        <div class="splash-msg">Go Muri Go</div>
     </div>
 
     <header>
@@ -581,7 +596,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
             </button>
 
-            <img src="icon.png" class="logo-img" alt="Gym">
+            <img src="muri.jpeg" class="logo-img" alt="Muri">
 
             <button id="settings-btn" class="header-btn" onclick="openSettings()">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
