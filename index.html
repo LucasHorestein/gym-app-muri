@@ -1572,10 +1572,12 @@
         function updateManifest() {
             const iconSrc  = appLogo || new URL("icon.png", location.href).href;
             const iconType = appLogo ? "image/jpeg" : "image/png";
+            const base     = location.pathname.replace(/\/[^/]*$/, '/');
             const manifest = {
-                "name": "Gym", "short_name": "Gym", "start_url": ".",
-                "display": "standalone", "background_color": "#0d0a07",
-                "theme_color": "#0d0a07", "orientation": "portrait",
+                "name": "Muri Gym", "short_name": "Muri",
+                "start_url": base, "scope": base,
+                "display": "standalone", "background_color": "#08050f",
+                "theme_color": "#08050f", "orientation": "portrait",
                 "icons": [
                     { "src": iconSrc, "sizes": "192x192", "type": iconType, "purpose": "any maskable" },
                     { "src": iconSrc, "sizes": "512x512", "type": iconType, "purpose": "any maskable" }
